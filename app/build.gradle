@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.1"
+    defaultConfig {
+        applicationId "com.brqc.app.jnj"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+
+        // release configuration for the build
+        release {
+
+            shrinkResources true
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        // debug configuration for the build
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+
+    }
+
+
+    // Sign in configuration for app
+    signingConfigs {
+        release {
+            storeFile file("BRQC-App-Signin.jks")
+            storePassword "BRQCNEWSAPP"
+            keyAlias "BRQCNEWSS"
+            keyPassword "BRQCNEWSAPP"
+        }
+    }
+
+
+    flavorDimensions("default")
+
+    productFlavors {
+
+        //QA Version details
+        qa {
+
+            dimension "default"
+            applicationIdSuffix '.qa'
+            versionNameSuffix "-QA"
+            resValue "string", "app_name", "BRQCNEWS-QA"
+
+
+        }
+
+        // Stage version details
+        stage {
+
+            dimension "default"
+            applicationIdSuffix '.stage'
+            versionNameSuffix "-STAGE"
+            resValue "string", "app_name", "BRQCNEWS-STAGE"
+        }
+
+        // production version details
+        prod {
+
+            dimension "default"
+            applicationIdSuffix '.prod'
+            versionNameSuffix "-PROD"
+            resValue "string", "app_name", "BRQCNEWS-PROD"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:27.+'
+    compile 'com.android.support:design:27.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+
+
+    // retrofit, gson
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    compile "com.squareup.okhttp3:okhttp:3.2.0"
+    compile "com.squareup.okhttp3:logging-interceptor:3.2.0"
+
+    compile "com.android.support:recyclerview-v7:27.0.0"
+    compile 'com.android.support:cardview-v7:27.0.0'
+
+    //Image Loading Library
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+
+    compile 'com.romandanylyk:pageindicatorview:1.0.0@aar'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+}

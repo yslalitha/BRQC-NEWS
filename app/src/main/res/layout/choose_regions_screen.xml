@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/standard_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="@dimen/standard_preference_screen_margin_bottom"
+        android:layout_marginTop="@dimen/standard_preference_screen_margin_top"
+        android:background="@drawable/choose_region" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:clipToPadding="false"
+        android:scrollbars="horizontal"
+        android:padding="@dimen/standard_global_layout_padding"
+        android:id="@+id/choose_region_rcv"
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/pref_continue_button"
+            style="@style/ButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/preference_continue_button" />
+    </LinearLayout>
+
+</LinearLayout>

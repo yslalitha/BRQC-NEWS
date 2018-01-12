@@ -1,0 +1,13 @@
+<resources>
+    <string name="login_screen_user_name_hint">Username</string>
+    <string name="login_screen_password_hint">Password</string>
+    <string name="login_screen_button">Login</string>
+    <string name="preference_continue_button">Continue</string>
+    <string name="notification_pref_daily">Daily</string>
+    <string name="notification_pref_monthly">Monthly</string>
+    <string name="notification_pref_weekly">Weekly</string>
+    <string name="home"></string>
+    <string name="favorites"></string>
+    <string name="notification"></string>
+    <string name="filter"></string>
+</resources>

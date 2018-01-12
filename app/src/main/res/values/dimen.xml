@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_global_layout_padding">16dp</dimen>
+    <dimen name="standard_global_layout_padding_half">8dp</dimen>
+    <dimen name="login_user_pass_margin">30dp</dimen>
+    <dimen name="corner_radius">32dp</dimen>
+    <dimen name="standard_text_size">18sp</dimen>
+    <dimen name="standard_preference_screen_margin_top">20dp</dimen>
+    <dimen name="standard_preference_screen_margin_bottom">20dp</dimen>
+</resources>

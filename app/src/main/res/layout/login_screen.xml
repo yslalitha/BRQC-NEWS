@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/standard_background_color"
+    android:padding="@dimen/standard_global_layout_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/choose_region" />
+
+    <LinearLayout
+        android:padding="@dimen/standard_global_layout_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/login_user_pass_margin"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/login_username"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_media_play"
+            android:hint="@string/login_screen_user_name_hint"
+            android:padding="@dimen/standard_global_layout_padding" />
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/login_password"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/btn_star"
+            android:hint="@string/login_screen_password_hint"
+            android:padding="@dimen/standard_global_layout_padding" />
+    </LinearLayout>
+
+    <Button
+        style="@style/ButtonStyle"
+        android:text="@string/login_screen_button"
+        android:id="@+id/login_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>
