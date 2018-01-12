@@ -6,4 +6,5 @@
 
     <color name="standard_background_color">#1095FC</color>
     <color name="white">#FFFFFF</color>
+    <color name="black">#111111</color>
 </resources>

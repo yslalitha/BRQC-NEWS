@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<Button android:textSize="10sp"
-    android:textColor="@android:color/black"
+<Button android:textSize="16sp"
     android:textAllCaps="false"
-    style="@style/RegionItemButtonStyle"
+    android:textColor="@android:color/white"
+    android:background="@drawable/region_item_bg_unselected"
     android:text="@string/login_screen_button"
     android:id="@+id/choose_region_item_button"
-    android:layout_width="130dp"
+    android:layout_width="wrap_content"
+    android:textStyle="normal"
     android:layout_height="wrap_content"
-    android:minHeight="0dp" android:minWidth="0dp"
     xmlns:android="http://schemas.android.com/apk/res/android" />
 
 

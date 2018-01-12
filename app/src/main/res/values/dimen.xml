@@ -7,4 +7,5 @@
     <dimen name="standard_text_size">18sp</dimen>
     <dimen name="standard_preference_screen_margin_top">20dp</dimen>
     <dimen name="standard_preference_screen_margin_bottom">20dp</dimen>
+    <dimen name="brqc_banner_textsize">60sp</dimen>
 </resources>

@@ -7,4 +7,8 @@
         android:bottomLeftRadius="@dimen/corner_radius"
         android:topRightRadius="@dimen/corner_radius"
         android:topLeftRadius="@dimen/corner_radius"/>
+    <stroke
+        android:width="1dp"
+        android:color="#41aff4" />
+
 </shape>

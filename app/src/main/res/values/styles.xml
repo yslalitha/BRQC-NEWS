@@ -14,7 +14,6 @@
         <item name="android:textColorHint">@android:color/white</item>
         <item name="android:drawablePadding">@dimen/standard_global_layout_padding</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:padding">@dimen/standard_global_layout_padding</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
@@ -26,10 +25,8 @@
     </style>
 
     <style name="ButtonStyle">
-        <item name="android:padding">@dimen/standard_global_layout_padding</item>
         <item name="android:textSize">@dimen/standard_text_size</item>
         <item name="android:background">@drawable/roundedbutton</item>
-        <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
     <style name="RegionItemButtonStyle" parent="ButtonStyle">

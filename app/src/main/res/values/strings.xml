@@ -10,4 +10,5 @@
     <string name="favorites"></string>
     <string name="notification"></string>
     <string name="filter"></string>
+    <string name="brqc_banner_text">BRQC</string>
 </resources>
