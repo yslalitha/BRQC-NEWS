@@ -136,6 +136,7 @@ public class Configuration implements Parcelable {
         @SerializedName("EActionValue")
         @Expose
         private String eActionValue;
+        private boolean isSelected;
         public final  Parcelable.Creator<EnforcementAction> CREATOR = new Creator<EnforcementAction>() {
 
 
@@ -188,6 +189,9 @@ public class Configuration implements Parcelable {
         public void setEActionValue(String eActionValue) {
             this.eActionValue = eActionValue;
         }
+        public void setSelected(boolean isSelected){ this.isSelected = isSelected;}
+
+        public boolean getSelected(){ return isSelected;}
 
         public void writeToParcel(Parcel dest, int flags) {
             dest.writeValue(eActionId);
@@ -209,6 +213,7 @@ public class Configuration implements Parcelable {
         @SerializedName("FAreaValue")
         @Expose
         private String fAreaValue;
+        private  boolean isSelected;
         public final Parcelable.Creator<FunctionalArea> CREATOR = new Creator<FunctionalArea>() {
 
 
@@ -261,6 +266,9 @@ public class Configuration implements Parcelable {
         public void setFAreaValue(String fAreaValue) {
             this.fAreaValue = fAreaValue;
         }
+        public void setSelected(boolean isSelected){ this.isSelected = isSelected;}
+
+        public boolean getSelected(){ return isSelected;}
 
         public void writeToParcel(Parcel dest, int flags) {
             dest.writeValue(fAreaId);
@@ -282,6 +290,7 @@ public class Configuration implements Parcelable {
         @SerializedName("HAuthorityValue")
         @Expose
         private String hAuthorityValue;
+        private boolean isSelected;
         public final Parcelable.Creator<HealthAuthority> CREATOR = new Creator<HealthAuthority>() {
 
 
@@ -334,6 +343,9 @@ public class Configuration implements Parcelable {
         public void setHAuthorityValue(String hAuthorityValue) {
             this.hAuthorityValue = hAuthorityValue;
         }
+        public void setSelected(boolean isSelected){ this.isSelected = isSelected;}
+
+        public boolean getSelected(){ return isSelected;}
 
         public void writeToParcel(Parcel dest, int flags) {
             dest.writeValue(hAuthorityId);
@@ -355,6 +367,7 @@ public class Configuration implements Parcelable {
         @SerializedName("PreferenceValue")
         @Expose
         private String preferenceValue;
+        private boolean isSelected;
         public final  Parcelable.Creator<NotificationPreference> CREATOR = new Creator<NotificationPreference>() {
 
 
@@ -407,6 +420,9 @@ public class Configuration implements Parcelable {
         public void setPreferenceValue(String preferenceValue) {
             this.preferenceValue = preferenceValue;
         }
+        public void setSelected(boolean isSelected){ this.isSelected = isSelected;}
+
+        public boolean getSelected(){ return isSelected;}
 
         public void writeToParcel(Parcel dest, int flags) {
             dest.writeValue(preferenceId);
@@ -428,6 +444,7 @@ public class Configuration implements Parcelable {
         @SerializedName("RegionValue")
         @Expose
         private String regionValue;
+        private boolean isSelected = false;
         public final Parcelable.Creator<Region> CREATOR = new Creator<Region>() {
 
 
@@ -480,6 +497,10 @@ public class Configuration implements Parcelable {
         public void setRegionValue(String regionValue) {
             this.regionValue = regionValue;
         }
+
+        public void setSelected(boolean isSelected){ this.isSelected = isSelected;}
+
+        public boolean getSelected(){ return isSelected;}
 
         public void writeToParcel(Parcel dest, int flags) {
             dest.writeValue(regionId);

@@ -45,7 +45,8 @@ public class BRQCLoginFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.login_screen, null);
 
-
+        SharedPreferences prefs = getContext().getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+        prefs.edit().clear().commit();
         userNameET = root.findViewById(R.id.login_username);
         passwordET = root.findViewById(R.id.login_password);
         submitBTN = root.findViewById(R.id.login_button);
@@ -58,18 +59,18 @@ public class BRQCLoginFragment extends Fragment {
 
 
                 SharedPreferences mSharedPreferences = BRQCPreferences.getMySharedPreferencesInstance(getContext());
-                if (userName != null && !userName.isEmpty() && mSharedPreferences.getString(BRQCConstants.USERNAME, "AJAY").contains("AJAY")
+              //  if (userName != null && !userName.isEmpty() && mSharedPreferences.getString(BRQCConstants.USERNAME, "AJAY").contains("AJAY")
 
-                        && password != null && !password.isEmpty() && mSharedPreferences.getString(BRQCConstants.PASSWORD, "AJAY").contains("AJAY")) {
+               //         && password != null && !password.isEmpty() && mSharedPreferences.getString(BRQCConstants.PASSWORD, "AJAY").contains("AJAY")) {
                     // Start New Journey Activity
                     Toast.makeText(getContext(), "valid credentials !!!!", Toast.LENGTH_LONG).show();
 
                     Intent mIntent = new Intent(getActivity(), BRQCChoosePreferenceActivity.class);
                     startActivity(mIntent);
 
-                } else {
+              //  } else {
                     Toast.makeText(getContext(), "Please enter valid credentials !!!!", Toast.LENGTH_LONG).show();
-                }
+              //  }
             }
         });
         return root;

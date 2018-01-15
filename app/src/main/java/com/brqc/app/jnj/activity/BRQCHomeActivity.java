@@ -160,7 +160,7 @@ public class BRQCHomeActivity extends AppCompatActivity implements NetworkConnec
      *
      */
     public void makeServiceCall() {
-        mProgressDialog.show();
+     //   mProgressDialog.show();
         BodyParams bodyParams = new BodyParams();
         bodyParams.Username = "phubball";
         bodyParams.EmailId = "phubball@its.jnj.com";
@@ -172,7 +172,7 @@ public class BRQCHomeActivity extends AppCompatActivity implements NetworkConnec
         mGetNewsFeedForUserCall.enqueue(new Callback<GetNewsFeedForUser>() {
             @Override
             public void onResponse(Call<GetNewsFeedForUser> call, Response<GetNewsFeedForUser> response) {
-                mProgressDialog.dismiss();
+             //   mProgressDialog.dismiss();
                 Log.d(TAG, "Number of movies received: " + response);
                 mGetNewsFeedForUser = response.body();
                 setupBottomNavigation(mGetNewsFeedForUser);

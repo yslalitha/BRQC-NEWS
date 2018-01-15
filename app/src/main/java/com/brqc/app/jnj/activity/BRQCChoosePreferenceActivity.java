@@ -77,7 +77,7 @@ public class BRQCChoosePreferenceActivity extends AppCompatActivity implements N
     }
 
     private void makeServiceCall() {
-        mProgressDialog.show();
+     //   mProgressDialog.show();
         BRQCServiceInterface mBrqcServiceInterface = BRQCServiceFactory.makeBRQCService().create(BRQCServiceInterface.class);
         Call<Configuration> call = mBrqcServiceInterface.getBRQCConfiguration();
         call.enqueue(new Callback<Configuration>() {
