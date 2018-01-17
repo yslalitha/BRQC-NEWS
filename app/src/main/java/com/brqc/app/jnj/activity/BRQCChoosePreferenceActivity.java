@@ -22,6 +22,8 @@ import com.brqc.app.jnj.utils.NetworkConnectionListener;
 import com.brqc.app.jnj.utils.NetworkSnackBar;
 import com.rd.PageIndicatorView;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -106,7 +108,7 @@ public class BRQCChoosePreferenceActivity extends AppCompatActivity implements N
 
     private void setUpView(Configuration mConfiguration, final ActionBar mToolbar){
         PageIndicatorView pageIndicatorView = findViewById(R.id.pageIndicatorView);
-        pageIndicatorView.setCount(4); // specify total count of indicators
+        pageIndicatorView.setCount(3); // specify total count of indicators
         pageIndicatorView.setSelection(0);
         mViewPager =  findViewById(R.id.brqc_preference_screen_viewpager);
         adapter = new BRQCViewPagerAdapter(getApplicationContext(),getSupportFragmentManager(),mConfiguration ,mToolbar);
@@ -163,5 +165,6 @@ public class BRQCChoosePreferenceActivity extends AppCompatActivity implements N
             NetworkSnackBar.showToast(isConnected);
         }
     }
+
 
 }

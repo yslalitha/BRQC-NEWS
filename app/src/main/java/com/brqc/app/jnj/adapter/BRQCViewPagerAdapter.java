@@ -20,7 +20,7 @@ import com.brqc.app.jnj.model.Configuration;
 public class BRQCViewPagerAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
-    public static int totalPage = 5;
+    public static int totalPage = 4;
     private Configuration mConfiguration;
     private ActionBar mToolbar;
 
@@ -45,16 +45,16 @@ public class BRQCViewPagerAdapter extends FragmentPagerAdapter {
 
                 mFragment = ChooseFunctionalAreaFragment.newInstance(mContext,mConfiguration);
                 break;
-            case 2:
+            /*case 2:
 
                 mFragment = ChooseHealthAuthorityFragment.newInstance(mContext,mConfiguration);
 
-                break;
-            case 3:
+                break;*/
+            case 2:
 
                 mFragment = ChooseEnforcementActionFragment.newInstance(mContext,mConfiguration);
                 break;
-            case 4:
+            case 3:
 
                 mFragment = ChooseNotifictionPreferenceFragment.newInstance(mContext,mConfiguration);
                 break;
